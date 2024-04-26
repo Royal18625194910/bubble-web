@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSection from "./components/HeroSection";
 import NavBar from "@/app/components/NavBar";
 import AboutSection from "@/app/components/AboutSection";
@@ -10,16 +9,16 @@ import AchievementsSection from "@/app/components/AchievementsSection";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
-        {/*顶部菜单栏*/}
-        <NavBar />
+      {/*顶部菜单栏*/}
+      <NavBar />
       <div className="container mx-auto py-4 px-12 mt-24">
-          <HeroSection />
-          <AchievementsSection />
-          <AboutSection />
-          <ProjectsSection />
-          <EmailSection />
+        <HeroSection />
+        <AchievementsSection />
+        <AboutSection />
+        <ProjectsSection />
+        <EmailSection />
       </div>
-        <Footer />
+      <Footer />
     </main>
   );
 }
