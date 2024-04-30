@@ -4,7 +4,6 @@
 #    push:
 #      branches:
 #        - Main
-#
 #jobs:
 #    build-and-deploy:
 #      runs-on: ubuntu-latest
@@ -45,7 +44,7 @@ name: 打包应用并上传腾讯云
 on:
   push:
     branches:
-      - master
+      - Main
 
 jobs:
   build:
