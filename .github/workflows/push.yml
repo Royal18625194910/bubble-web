@@ -80,10 +80,10 @@ jobs:
           # scp参数
           ARGS: '-avzr --delete'
           # 源目录
-#          SOURCE: './'
+          SOURCE: '.'
           # 服务器ip：换成你的服务器IP
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           # 用户
-          REMOTE_USER: 'root'
+          REMOTE_USER: 'admin'
           # 目标地址
           TARGET: '/home/admin/Bubble-Portfolio'
