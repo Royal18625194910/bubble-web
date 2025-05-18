@@ -1,12 +1,20 @@
-'use client'
-import Image from "next/image";
+"use client";
 import TabButton from "@/app/components/TabButton";
-import { useState, useTransition} from "react";
+import Image from "next/image";
+import { useState, useTransition } from "react";
 
-const TAB_DATA = [
+export const TAB_DATA = [
   {
     title: "Skills",
     id: "skills",
+    list: [
+      "HTML、CSS、JavaScript",
+      "TypeScript、TailwindCSS",
+      "NextJS、Vue、React、Zustand",
+      "NestJS、Prisma、TypeORM",
+      "MySQL、MongoDB",
+      "... ",
+    ],
     content: (
       <ul>
         <li>HTML、CSS、JavaScript</li>
@@ -21,6 +29,11 @@ const TAB_DATA = [
   {
     title: "Experience",
     id: "experience",
+    list: [
+      "使用NextJs+Clerk+Stripe+Prisma搭建Bubble AI集成平台",
+      "使用NestJS+TypeORM+Mysql进行RBAC权限管理",
+      ". . . ",
+    ],
     content: (
       <ul>
         <li>使用NextJs+Clerk+Stripe+Prisma搭建Bubble AI集成平台</li>
@@ -32,6 +45,14 @@ const TAB_DATA = [
   {
     title: "Education and Honor",
     id: "education",
+    list: [
+      "23届本科毕业生",
+      "华为云大前端计划优秀学员",
+      "工信部高级前端工程师证书",
+      "21年蓝桥杯Web省二等奖",
+      "20年蓝桥杯Python省三等奖",
+      ". . . ",
+    ],
     content: (
       <ul>
         <li>23届本科毕业生</li>
@@ -55,7 +76,7 @@ function AboutSection() {
     });
   };
   return (
-    <section className="text-white">
+    <section id="about" className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:py-16">
         <div className="h-full">
           <Image
@@ -80,29 +101,30 @@ function AboutSection() {
           <div className="flex mt-8 justify-start">
             <TabButton
               selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
+              active={tab === "skills"}>
               {" "}
               Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("experience")}
-              active={tab === "experience"}
-            >
+              active={tab === "experience"}>
               {" "}
               Experience{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
+              active={tab === "education"}>
               {" "}
               Education{" "}
             </TabButton>
           </div>
           {/* tab 内容 */}
           <div className="mt-5">
-            {TAB_DATA.find((item) => item.id === tab)?.content}
+            <ul>
+              {TAB_DATA.find((item) => item.id === tab)?.list.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

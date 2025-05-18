@@ -1,31 +1,9 @@
 "use client";
-// import AnimatedNumbers from "react-animated-numbers";
+import { achievementsList } from "@/constants/data";
 import dynamic from "next/dynamic";
 const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
-    ssr: false,
+  ssr: false,
 });
-
-
-const achievementsList = [
-  {
-    metric: "Projects",
-    value: "5",
-    postfix: "+",
-  },
-  {
-    prefix: "~",
-    metric: "Users",
-    value: "999",
-  },
-  //   {
-  //     metric: "Awards",
-  //     value: "7",
-  //   },
-  {
-    metric: "Years",
-    value: "1",
-  },
-];
 
 const AchievementsSection = () => {
   return (
@@ -35,8 +13,7 @@ const AchievementsSection = () => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
-            >
+              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0">
               <h2 className="text-white text-4xl font-bold flex flex-row px-3">
                 {achievement.prefix}
                 <AnimatedNumbers
