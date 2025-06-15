@@ -23,7 +23,7 @@ const AchievementsSection = () => {
                     type: "spring",
                     duration: index + 0.9,
                   })}
-                  animateToNumber={parseInt(achievement.value)}
+                  animateToNumber={Number(achievement.value)}
                 />
                 {achievement.postfix}
               </h2>
