@@ -38,6 +38,11 @@ const ProjectsSection = () => {
           isSelected={tag === "Web"}
         />
         <ProjectTag
+          name="AI"
+          onClick={() => setTag("AI")}
+          isSelected={tag === "AI"}
+        />
+        <ProjectTag
           name="Mobile"
           onClick={() => setTag("Mobile")}
           isSelected={tag === "Mobile"}
@@ -54,7 +59,7 @@ const ProjectsSection = () => {
             <ProjectCard
               title={item.title}
               description={item.description}
-              imgUrl={item.image}
+              imgUrl={item.image as any}
               gitUrl={item.gitUrl}
               previewUrl={item.previewUrl}
             />

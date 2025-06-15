@@ -11,36 +11,21 @@ export const TAB_DATA = [
       "HTML、CSS、JavaScript",
       "TypeScript、TailwindCSS",
       "NextJS、Vue、React、Zustand",
+      "langchain、openai、vercel ai",
       "NestJS、Prisma、TypeORM",
-      "MySQL、MongoDB",
-      "... ",
+      "MySQL、MongoDB、PostgreSQL",
     ],
-    content: (
-      <ul>
-        <li>HTML、CSS、JavaScript</li>
-        <li>TypeScript、TailwindCSS</li>
-        <li>NextJS、Vue、React、Zustand</li>
-        <li>NestJS、Prisma、TypeORM</li>
-        <li>MySQL、MongoDB</li>
-        <li>. . . </li>
-      </ul>
-    ),
   },
   {
     title: "Experience",
     id: "experience",
     list: [
-      "使用NextJs+Clerk+Stripe+Prisma搭建Bubble AI集成平台",
-      "使用NestJS+TypeORM+Mysql进行RBAC权限管理",
-      ". . . ",
+      "基于Nextjs+Convex+Tailwind+Fabric+Imagekit的Bubble Canva绘画平台",
+      "基于Nextjs+Tailwind+Convex+sandpack的Bubble Bolt Code编程平台（类似Bolt new、lovable）",
+      "基于Nextjs+Tailwind+vercel ai的Bubble Ai集成平台",
+      "基于React Native + Expo + Supabase 的Bubble Uber打车应用",
+      "基于React Native + Expo + gizsdk 的Bubble 智能灯应用",
     ],
-    content: (
-      <ul>
-        <li>使用NextJs+Clerk+Stripe+Prisma搭建Bubble AI集成平台</li>
-        <li>使用NestJS+TypeORM+Mysql进行RBAC权限管理</li>
-        <li>. . . </li>
-      </ul>
-    ),
   },
   {
     title: "Education and Honor",
@@ -51,18 +36,8 @@ export const TAB_DATA = [
       "工信部高级前端工程师证书",
       "21年蓝桥杯Web省二等奖",
       "20年蓝桥杯Python省三等奖",
-      ". . . ",
+      "曾担任前端组组长，负责团队项目",
     ],
-    content: (
-      <ul>
-        <li>23届本科毕业生</li>
-        <li>华为云大前端计划"优秀学员"</li>
-        <li>工信部高级前端工程师证书</li>
-        <li>21年蓝桥杯Web省二等奖</li>
-        <li>20年蓝桥杯Python省三等奖</li>
-        <li>. . . </li>
-      </ul>
-    ),
   },
 ];
 
